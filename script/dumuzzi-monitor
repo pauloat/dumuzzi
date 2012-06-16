@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+puts "Please wait..."
+require 'rubygems'
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+require 'forever'
+require File.expand_path('../../config/application',  __FILE__)
+
+
+Rails.application.require_environment!
+require "#{Dir.pwd}/lib/dumuzzi-monitor"
+
+Forever.run do
+  # Our working directory, here we store pids/logs
+  dir Dir.pwd
+  log "#{dir}/log/monitor.log"
+  pid "#{dir}/tmp/pids/monitor.pid"
+
+  on_ready do
+    puts "[System] Monitor initialiging"
+    puts "[System] Monitor ready."
+  end
+
+  # Collecting host data to populate service jobs
+  every 25.seconds do
+    DumuzziMonitor::collector
+  end
+  
+  every 30.seconds do
+    DumuzziMonitor::tester
+  end
+
+  every 45.seconds do
+    DumuzziMonitor::activate
+  end
+
+  every 60.seconds do
+    DumuzziMonitor::gateway_state_update
+  end
+
+  on_error do |e|
+    puts "[System] Error #{e.message}"
+  end
+
+  on_exit do
+    puts "[System] Monitor exit."
+  end
+
+end

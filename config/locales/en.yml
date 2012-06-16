@@ -1,0 +1,324 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+    date:
+      formats:
+        default: "%m/%d/%Y"
+        short: "%B %d"
+        long: "%B %d, %Y"
+        custom: "%m/%d/%Y"
+        edition_format_date: "%B/%Y"
+        only_day: "%d"
+        only_weekday: "%A"
+        month_complete: "%B"
+        month_abv: "%b"
+        header_format_date: "%B %Y"
+        
+        
+      day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+      abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+      month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+      abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+      order: [ :month, :day, :year ]
+
+    time:
+      formats:
+        default: "%A, %d %B %Y, %H:%M %S %z"
+        short: "%m/%d, %H:%M"
+        long: "%B %d, %Y %H:%M"
+        custom: "%d/%m/%Y"
+        edition_format_date: "%B/%Y"
+        only_day: "%d"
+        only_weekday: "%A"
+        month_complete: "%B"
+        month_abv: "%b"
+        header_format_date: "%B de %Y"
+        comment_format_date: "%B %d, %Y at %H:%M a.m."
+      am: am
+      pm: pm
+
+  # date helper distance in words
+    datetime:
+    distance_in_words:
+      half_a_minute: 'half minute'
+      less_than_x_seconds:
+        one: 'less than 1 second'
+        other: 'than a {{count}} seconds'
+
+      x_seconds:
+        one: '1 second'
+        other: '{{count}} seconds'
+
+      less_than_x_minutes:
+        one: 'less than a minute'
+        other: 'than a {{count}} minutes'
+
+      x_minutes:
+        one: '1 minute'
+        other: '{{count}} minutes'
+
+      about_x_hours:
+        one: 'about 1 hour'
+        other: 'about {{count}} hours'
+
+      x_days:
+        one: '1 day'
+        other: '{{count}} days'
+
+      about_x_months:
+        one: 'about 1 month'
+        other: 'about {{count}} months'
+
+      x_months:
+        one: '1 month'
+        other: '{{count}} months'
+
+      about_x_years:
+        one: 'about 1 year'
+        other: 'about {{count}} years'
+
+      over_x_years:
+        one: 'more than 1 year'
+        other: 'more than {{count}} years'
+    prompts:
+      year:   "Year"
+      month:  "Month"
+      day:    "Day"
+      hour:   "Hour"
+      minute: "Minute"
+      second: "Second"
+
+   # numeros
+    number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'U$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 1
+        delimiter: '.'
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+
+# Used in array.to_sentence.
+    support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+# Active Record
+    activerecord:
+    errors:
+      template:
+        header:
+          one: "Unable to write {{model}}: 1 error"
+          other: "Unable to write {{model}}: {{count}} errors."
+        body: "Please check (the) following field(s):"
+      messages:
+        inclusion: "is not included in the list"
+        exclusion: "Unavailable"
+        invalid: "not valid"
+        confirmation: "not agree with the confirmation"
+        accepted: "be accepted"
+        empty: "can not be empty"
+        blank: "can not be blank"
+        too_long: "is too long (maximum: {{count}} characters)"
+        too_short: "is very short (minimum: {{count}} characters)"
+        wrong_length: "não possui o tamanho esperado ({{count}} characters)"
+        taken: "is already in use"
+        not_a_number: "not a number"
+        greater_than: "must be greater than {{count}}"
+        greater_than_or_equal_to: "must be greater than or equal to {{count}}"
+        equal_to: "must be equal to {{count}}"
+        less_than: "must be less than {{count}}"
+        less_than_or_equal_to: "must be less than or equal to {{count}}"
+        odd: "be odd"
+        even: "be aware"
+        
+    # layout geral
+        
+    hello: "Hello world"
+    name: "Name"
+    address: "Address"
+    status: "Status" 
+    monitor: "Monitor" 
+    enabled: "Enabled"
+    disabled: "Disabled"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    are_you_sure: "Are you sure?"
+    new_domain: "New domain"
+    id: "ID"
+    description: "Description"
+    allow_comments: "Allow comments"
+    share: "Share"
+    status: "Status"
+    share: "Share"
+    back: "Back"
+    showing: "Showing"
+    user_id: "User id"
+    description: "Description"
+    send_alert: "Send alert"
+    editing_domain: "Editing domain"
+    editing_protocol: "Editing protocol"
+    listing_protocols: "Listing protocols"
+    new_protocol: "New protocol"
+    add_protocol: "Add protocol"
+    edit_protocol: "Edit protocol"
+    editing_host: "Editing host"
+    new_host: "New host"
+    editing_hosts_service: "Editing service"
+    host: "Host"
+    service: "Service"
+    interval: "Interval"
+    new_hosts_service: "New hosts service"
+    showing: "Showing"
+    editing_queued: "Editing queued"
+    new_queued: "New queued"
+    editing_service: "Editing service"
+    port: "Port"
+    description: "Description"
+    new_service: "New service"
+    add_service: "Add service"
+    editing_state_change: "Editing state changeo"
+    listing_state_changes: "Listing state changes"
+    listing_hosts: "Domain hosts"
+    listing_queueds: "Listing queueds"
+    new_queued: "New queued" 
+    add_queued: "Add queued"  
+    edit_queued: "Edit queued" 
+    listing_services: "Listing services"
+    protocol: "Protocol"
+    new_state_change: "New state change"
+    listing_domains: "Listing domains"
+    listing_hosts_services: "Services for the monitored host"
+    domain: "domain"
+    domain_created: "Domain Created"
+    domain_updated: "Domain Updated"
+    user: "User"
+    event_description: "Event Description "
+    host_detail: "Host Detail"
+    host_created: "Host Created"
+    host_updated: "Host Updated"
+    home: "HOME"
+    terms: "TERMS"
+    about: "ABOUT"
+    log: "LOGIN"
+    logged: "LOGGED"
+    online: "ONLINE"
+    newest: "NEWEST"
+    testers: "TESTERS"
+    hosts_service_created: "Service Created"
+    hosts_service_updated: "Service Updated"
+    edit_profile: "My Profile"
+    signout: "Sign out"
+    register: "Register"
+    signin: "Sign in"
+    edit_your_profile: "Edit Your Profile"
+    sign_in_with: "Sign in with"
+    or: "Or"
+    my_domains: "MY Domains"
+    add_domain: "Add Domain"
+    edit_domain: "Edit Domain"
+    adding_domain: "Adding Domain"
+    add_host: "Add Host"
+    edit_host: "Edit Host"
+    adding_host: "Adding to host Domain"
+    add_hosts_service: "Add to the monitoring service"
+    edit_hosts_service: "Edit service monitoring"
+    adding_hosts_service: "Adding to the monitoring service"
+    of_host: "of the Host"
+    register_email: "Register Email"
+    login: "Login"
+    email: "E-mail"
+    password: "Password"
+    password_confirmation: "Password Confirmation"
+    update: "Update"
+    create: "Create"
+    you_can_sing_account: "You can sign in to this account using"
+    add_another_service_sign: "Add another service to sign in with"
+    add_one_services_sign: "Add one of the services to sign in with"
+    add_twitter_service_sign: "Add twitter service to sign in with"
+    add_facebook_service_sign: "Add facebook to sign in with"
+    are_you_sure_remove: "Are you sure you want to remove"
+    authentication_option: "authentication option"
+    remove: "Remove"
+    remember_me: "Remember me"
+    you_must_be_logged: "You must be logged in to access this page"
+    signed_in_successfully: "Signed in successfully."
+    authentication_successful: "Authentication successful."
+    sorry_didnt_authorize: "Sorry, You didn't authorize"
+    successfully_destroyed_authentication: "Successfully destroyed authentication."
+    successfully_created: "Successfully created."
+    successfully_updated: "Successfully updated."
+    successfully_created_user_session: "Successfully created user session."
+    successfully_destroyed_user_session: "Successfully destroyed user session."
+    reset: "Reset"
+
+    #home_titles
+
+    title_home_one: "What is it?"
+    title_home_two: "How emerged"
+    title_home_three: "Proposal"
+
+    #home_texts
+
+    text_home_one: "<p>Dumuzzi is a system monitoring machines and services by internet. Your goal is check the state current of services in machines previously configured sending alerts to administrator.</p>
+          <p>The name Dumuzzi comes from Sumerian Mythology, where Dumuzzi represented a faithful son, a guardian god of doors the sky. A service monitoring efficient is the guardian of heavens for a SysAdmin, since, know that your servers are online and operating in perfect state, has no price.</p>
+          
+          <p>The service is free, limited to ten (10) domains per user, can be utilized by any person that wanted monitor services or websites.</p>"
+
+    ##################
+
+    text_home_two: "<p>Dumuzzi born in the competition Rally on Rails, done by Team Cidadelas Jedis and is distributed under the license CDDL, open the collaborations.</p>"
+
+    ##################
+
+    text_home_three: "<p>Our proposal is available a service monitoring the at the same time be simple and reliable. For this, the tests are done of different hosts, in different continents and providers of services.</p>"
+    #################################### END HOME #####################################################################
+
+    license_sentence: "Attributed to license Open Source Initiative OSI - Common Development and Distribution License (CDDL-1.0)"
+
+    # terms
+
+    term_index: "Our proposal is available a service of monitoring that at the same time be simple and reliable. For this, the tests are done of different hosts, in different continents and providers of services."
+
+    term_uses: "The terms of use:"
+    term_used_one: "1 - Dumuzzi it only monitors the services remotely, not carrying out any action type of recovery."
+    term_used_two: "2 - We guarantee the sending of messages by e-mail."
+    term_used_three: "3 - The service predicts the sending of instant messaging."
+    term_used_four: "4 - In the event of sending of messages by SMS, the costs will be on account of the user, save in the cases there are sponsors. The user, in this case, should accept the receipt of publicity in each message."
+    term_used_five: "5 - Dumuzzi does not require the installation of customers or agents in the systems tested."
+    term_used_six: "6 - Dumuzzi utilizes only technology and open source components."
+    term_used_seven: "7 - Dumuzzi is done to run on Linux and Unix."
+    term_used_eight: "8 - Dumuzzi does not have technical support possible to hire, either on-site, remote and/or telephone. We offer a basic support by e-mail and by means of thread. Its use is on account and risk the user."
+    term_used_nine: "9 - The cancellation of its use can be done at any time, in lien or any warnings."
+    term_used_ten: "10 - Dumuzzi does not guarantee the exportation and/or migration of data registered."
+    #################################### END TERMS #####################################################################
+
+    technologies_used: "Learn about the technologies used:"

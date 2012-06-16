@@ -1,0 +1,51 @@
+<%= form_for(@hosts_service) do |f| %>
+<div class="module_content">
+  <% if @hosts_service.errors.any? %>
+    <div id="error_explanation">
+      <h4 class='alert_error'><%= pluralize(@hosts_service.errors.count, "error") %> prohibited this category from being saved:</h4>
+
+      <ul>
+      <% @hosts_service.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <label><b><%= I18n.t :host %></b></label>
+    <%= f.collection_select(:host_id, @hosts, :id, :name, {:prompt => 'Selecione'} ) %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :service %></b></label>
+    <%= f.collection_select(:service_id, @services, :id, :name, {:prompt => 'Selecione'} ) %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :interval %></b></label>
+    <%= f.collection_select(:interval_id, @intervals, :id, :name, {:prompt => 'Selecione'} ) %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :description %></b></label><br />
+    <%= f.text_area :description, :rows => 5 %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :monitor %></b></label>
+    <%= f.check_box :monitor %>
+  </fieldset>
+  
+</div>
+
+  <div class="submit_link">
+    <% if params[:action] == 'new' %>
+      <%= f.submit I18n.t(:add_hosts_service) %>
+    <% else %>
+      <%= f.submit I18n.t(:edit_hosts_service) %>
+    <% end %>
+    <%= submit_tag(I18n.t(:reset), { :name => 'reset', :type => "reset" }) %>
+    <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back), :border => 0), @hosts_service.host %>
+    <% if params[:action] == 'edit' %>
+      <%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show), :border => 0), @hosts_service %>
+    <% end %>
+  </div>
+
+<% end %>

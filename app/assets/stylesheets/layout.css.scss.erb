@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  background-color: #CFCFCF;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+ul, li {
+  list-style:none;
+}
+
+a {
+  text-decoration:none;
+  color: #369;
+}
+
+a:hover {
+  color:#CFCFCF;
+}
+
+#container {
+  /*border: 1px solid gray;*/
+  margin: 0 10%;
+  padding: 20px 40px;
+}
+
+header {
+  border: 1px solid black;
+  margin-top: 10px;
+  height: 150px;
+  text-align: center;
+  background: url(<%= asset_path "dumuzzi-logo.png" %>) #fff scroll 10px no-repeat;
+  border: none;
+  -moz-border-radius: 13px 13px 0px 0px;
+  -webkit-border-radius: 13px 13px 0px 0px;
+}
+
+header nav {
+  float:right;
+  padding:13px 24px 0 0;
+}
+
+header nav li {
+  float:left;
+  font-size:15px;
+  line-height:3em;
+  text-transform:uppercase;
+  padding-left:21px;
+  margin-left:19px;
+}
+
+header nav li:first-child {
+  background:none;
+  padding-left:0;
+  margin-left:0;
+}
+
+header h2 {
+  font-size: 26px;
+}
+
+section {
+  width: 100%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.tablesorter{
+  width: 100%;
+}
+
+article {
+  border: none;
+  width: 70%;
+  float: left;
+  background-color: #fff;
+}
+
+article p {
+  width: 100%;
+}
+
+article #about {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-size: -2px;
+}
+
+article h1, article h3, article h2 {
+  color: #696969;
+}
+
+article #terms {
+  margin-left: 10px;
+}
+
+article #crud {
+  margin-left: 10px;  
+  margin-bottom: 10px;  
+}
+
+article #crud a {
+  color: #104E8B;  
+}
+
+article #crud thead th {
+  border: 1px solid #CFCFCF;  
+  color: #104E8B;
+  padding: 4px;
+}
+
+article #crud tbody td {
+  text-align: center;
+  border: 1px solid #CFCFCF; 
+  padding: 4px; 
+}
+
+article #new {
+  margin-left: 10px;  
+  margin-bottom: 10px;  
+}
+
+article #new fieldset {
+  border: 0px;
+}
+
+article #show {
+  margin-left: 10px;
+}
+
+article #show td {
+  border: 1px solid #CFCFCF;
+  padding: 6px;
+}
+
+aside {
+  border: none;
+  width: 29%;
+  float: right;
+  background-color: #fff;
+}
+
+aside #sidebar {
+  width: 100%;
+  margin-left: 0px;
+}
+
+aside #sidebar h1 {
+  margin-left: 15px;
+  text-align: left;
+  color: #696969;
+}
+
+aside #sidebar p {
+  margin-left: 15px;
+  line-height: 6px;
+}
+
+aside #sidebar ul li {
+  text-align: left;
+  margin-left: 0px;
+}
+
+aside #sidebar ul li a {
+  text-align: left;
+  margin-left: 0px;
+}
+
+footer {
+  color: #696969;
+  border: none;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100%;
+  padding: 30px 0px 30px 0px;
+  background-color: #fff;
+  -moz-border-radius: 0px 0px 13px 13px;
+  -webkit-border-radius: 0px 0px 13px 13px;
+}
+
+footer b {
+  font-size: 14px;
+}
+
+#user_nav {
+  float: right;
+  font-size: 14px;
+}
+
+.auth_provider {
+  margin-right:15px;
+}
+
+#omniauth_connect p {
+  margin:1em 0 5px 0;
+}
+
+.omniauth_remove {
+  position:absolute;
+  margin-left:-5px;
+}
+
+.auth_providers_used {
+  margin-right:15px;
+}
+
+input[type=text], input[type=password], textarea {
+  border:0;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-size: 14px;
+  color:#444;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  border:1px solid #aaa;
+}
+
+.user-form {
+  float:left;
+  margin-left: 35px;
+}
+
+.omniauth-connect {
+  float:left;
+  margin-left:100px;
+}
+
+#status_message {
+  width:400px;
+}
+
+.time {
+  color:#999;
+  font-size:12px;
+}
+
+.username {
+  color:#007000;
+}
+
+.no-username {
+  color:#888;
+}
+
+.let-me-know {
+  color:#999;
+  font-size:13px;
+}
+
+/* Alerts */
+
+h4.alert_info {
+display: block;
+width: 95%;
+margin: 20px 3% 0 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #B5E5EF url(<%= asset_path "icn_alert_info.png" %>) no-repeat;
+background-position: 10px 10px;
+border: 1px solid #77BACE;
+color: #082B33;
+padding: 10px 0;
+text-indent: 40px;
+font-size: 14px;}
+
+h4.alert_warning {
+display: block;
+width: 95%;
+margin: 20px 3% 0 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #F5F3BA url(<%= asset_path "icn_alert_warning.png" %>) no-repeat;
+background-position: 10px 10px;
+border: 1px solid #C7A20D;
+color: #796616;
+padding: 10px 0;
+text-indent: 40px;
+font-size: 14px;}
+
+h4.alert_error {
+display: block;
+width: 95%;
+margin: 20px 3% 0 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #F3D9D9 url(<%= asset_path "icn_alert_error.png" %>) no-repeat;
+background-position: 10px 10px;
+border: 1px solid #D20009;
+color: #7B040F;
+padding: 10px 0;
+text-indent: 40px;
+font-size: 14px;}
+
+h4.alert_success {
+display: block;
+width: 95%;
+margin: 20px 3% 0 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #E2F6C5 url(<%= asset_path "icn_alert_success.png" %>) no-repeat;
+background-position: 10px 10px;
+border: 1px solid #79C20D;
+color: #32510F;
+padding: 10px 0;
+text-indent: 40px;
+font-size: 14px;}
+
+#image_user{
+  width:200px;
+  height:20px;
+  margin-left:355px;
+  margin-top:40px;
+}

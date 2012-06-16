@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+	  <title>Dumuzzi Host Monitor</title>
+	  <meta name="keywords" content="host service web based monitor"/>
+    <meta name="description" content="Dumuzzi is a free Host Monitoring system."/>
+	  <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />-->
+	  <%= javascript_include_tag "jquery-1.5.2.min", "jquery.tablesorter.min", "jquery.equalHeight" %>
+    <%#= javascript_include_tag "hideshow" %>
+    <%= stylesheet_link_tag "layout.css.scss.erb" %>
+	</head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/"><%= I18n.t :home %></a></li>
+            <li><a href="/terms"><%= I18n.t :terms %></a></li>
+            <li><a href="/about"><%= I18n.t :about %></a></li>
+            <% if current_user %>
+              <li><a href="/domains"><%= I18n.t :my_domains %></a></li>
+              <li><a href="/users/<%= current_user.id %>/edit"><%= I18n.t :edit_profile %></a></li>
+              <li><a href="/signout"><%= I18n.t :signout %></a></li>
+            <% else %>
+              <li><a href="/users/new"><%= I18n.t :register %></a></li>
+              <li><a href="/signin"><%= I18n.t :signin %></a></li>
+            <% end %>
+          </ul>
+        </nav>
+      </header>
+      
+      <section>
+        <article>
+          <%= outgoing_menssage %>
+          <%= yield %>
+        </article>
+        
+        <aside>
+          <% unless @hosts.nil? %>
+          <div id="sidebar">
+            <h1><%= I18n.t :online %></h1>
+            <% @hosts.each do |host| %>
+              <p><a href="http://<%= host.hostname %>"><%= host.hostname %></a></p>
+            <% end %>
+          </div>
+          <% end %>
+          <% unless @new_hosts.nil? %>
+          <div id="sidebar">
+            <h1><%= I18n.t :newest %></h1>
+            <% @new_hosts.each do |host| %>
+              <p><a href="http://<%= host.hostname %>"><%= host.hostname %></a></p>
+            <% end %>
+          </div>
+          <% end %>
+          <% unless @testers.nil? %>
+          <div id="sidebar">
+            <h1><%= I18n.t :testers %></h1>
+            <% @testers.each do |tester| %>
+              <p><a href="http://<%= tester.hostname %>"><%= tester.hostname %></a></p>
+            <% end %>
+          </div>
+          <% end %>
+        </aside>
+        
+        <%= render :partial => 'shared/sidebar_ads'%>
+        
+      </section>
+      
+      <footer>
+        <b><%= I18n.t :license_sentence %></b>
+      </footer>
+    </div>
+  </body>
+</html>  

@@ -1,0 +1,51 @@
+  <div id="show" >
+    <h3><%= I18n.t :host %> <%= @host.hostname %> <%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit), :border => 0), edit_host_path(@host) %> <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back), :border => 0), domain_path(@host.domain_id) %></h3>
+    <div class="tab_container">
+		  <div id="tab1" class="tab_content">
+			  <table class="tablesorter" cellspacing="0">
+          <tr> 
+            <td><b><%= I18n.t :domain %></b></th>
+            <td><%= @host.domain.name unless @host.domain.nil? %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :name %></b></th>
+            <td><%= @host.name %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :address %></b></th>
+            <td><%= @host.address %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :description %></b></th>
+            <td><%= @host.description %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :allow_comments %></b></th>
+            <td><%= show_icon @host.allow_comments, "enabled", "disabled" %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :send_alert %></b></th>
+            <td><%= show_icon @host.send_alert, "enabled", "disabled" %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :share %></b></th>
+            <td><%= show_icon @host.share, "enabled", "disabled" %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :status %></b></th>
+            <td><%= @host.status.name unless @host.status.nil? %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :monitor %></b></th>
+            <td><%= show_icon @host.monitor, "enabled", "disabled" %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :enabled %></b></th>
+            <td><%= show_icon @host.enabled, "enabled", "disabled" %></td>            
+			    </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <%= render :partial => 'hosts_services/index' %>

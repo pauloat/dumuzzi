@@ -1,0 +1,324 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt-br:
+    date:
+      formats:
+        default: "%d/%m/%Y"
+        short: "%d de %B"
+        long: "%d de %B de %Y"
+        custom: "%d/%m/%Y"
+        custom1: "%d.%m.%Y"
+        only_day: "%d"
+        only_weekday: "%A"
+        month_complete: "%B"
+        month_abv: "%b"
+        header_format_date: "%B de %Y"
+        edition_format_date: "%B/%Y"  
+
+      day_names: [Domingo, Segunda-feira, Terça-feira, Quarta-feira, Quinta-feira, Sexta-feira, Sábado]
+      abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+      month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+      abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+      order: [ :day, :month, :year ]
+
+    time:
+      formats:
+        default: "%A, %d de %B de %Y, %H:%M h"
+        short: "%d/%m, %H:%M h"
+        long: "%A, %d de %B de %Y, %H:%M h"
+        custom: "%d/%m/%Y"
+        edition_format_date: "%B/%Y"
+        only_day: "%d"
+        only_weekday: "%A"
+        month_complete: "%B"
+        month_abv: "%b"
+        header_format_date: "%B de %Y"
+        comment_format_date: "em %d de %B de %Y às %Hh%M"
+      am: ''
+      pm: ''
+
+  # date helper distancia em palavras
+    datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de {{count}} segundos'
+
+      x_seconds:
+        one: '1 segundo'
+        other: '{{count}} segundos'
+
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de {{count}} minutos'
+
+      x_minutes:
+        one: '1 minuto'
+        other: '{{count}} minutos'
+
+      about_x_hours:
+        one: 'aproximadamente 1 hora'
+        other: 'aproximadamente {{count}} horas'
+
+      x_days:
+        one: '1 dia'
+        other: '{{count}} dias'
+
+      about_x_months:
+        one: 'aproximadamente 1 mês'
+        other: 'aproximadamente {{count}} meses'
+
+      x_months:
+        one: '1 mês'
+        other: '{{count}} meses'
+
+      about_x_years:
+        one: 'aproximadamente 1 ano'
+        other: 'aproximadamente {{count}} anos'
+
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de {{count}} anos'
+    prompts:
+      year:   "Ano"
+      month:  "Mês"
+      day:    "Dia"
+      hour:   "Hora"
+      minute: "Minuto"
+      second: "Segundos"
+
+  # numeros
+    number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 1
+        delimiter: '.'
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+
+# Used in array.to_sentence.
+    support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+  # Active Record
+    activerecord:
+    errors:
+      template:
+        header:
+          one: "Não foi possível gravar {{model}}: 1 erro"
+          other: "Não foi possível gravar {{model}}: {{count}} erros."
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      messages:
+        inclusion: "não está incluído na lista"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: {{count}} caracteres)"
+        too_short: "é muito curto (mínimo: {{count}} caracteres)"
+        wrong_length: "não possui o tamanho esperado ({{count}} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "não é um número"
+        greater_than: "deve ser maior do que {{count}}"
+        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
+        equal_to: "deve ser igual a {{count}}"
+        less_than: "deve ser menor do que {{count}}"
+        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
+        
+    # layout geral
+          
+    hello: "Hello world"
+    name: "Nome"
+    address: "Endereço"
+    status: "Status" 
+    monitor: "Monitor" 
+    enabled: "Ativado"
+    disabled: "Desativado"
+    show: "Visualizar"
+    edit: "Editar"
+    delete: "Deletar"
+    are_you_sure: "Você tem certeza?"
+    new_domain: "Novo Domínio"
+    id: "ID"
+    description: "Descrição"
+    allow_comments: "Permitir comentários"
+    share: "Compartilhar"
+    back: "Voltar"
+    show: "Show"
+    new_domain: "Novo domínio" 
+    showing: "Mostrando"
+    user_id: "ID de usuário"
+    description: "Descrição"
+    send_alert: "Enviar alerta"
+    editing_domain: "Editando o domínio"
+    editing_protocol: "Edição protocolo"
+    listing_protocols: "Listagem de protocolo"
+    new_protocol: "Novo protocolo" 
+    add_protocol: "Adicionar protocolo"
+    edit_protocol: "Editar protocolo"
+    editing_host: "Editando Host do Domínio"
+    new_host: "Nova hospedagem"
+    editing_hosts_service: "Editando serviço"
+    host: "Host"
+    service: "Serviço"
+    interval: "Intervalo"
+    new_hosts_service: "Serviço de nova hospedagem"
+    showing: "Mostrar"
+    editing_queued: "Edição em fila"
+    new_queued: "Nova fila"
+    editing_service: "Edição de serviços"
+    port: "Porta"
+    description: "Descrição"
+    new_service: "Novo serviço"
+    add_service: "Adicionar serviço"
+    editing_state_change: "Mudança no estado de edição"
+    listing_state_changes: "Mudança no estado de listagem"
+    listing_domains: "Listagem de domínios"
+    listing_hosts: "Hosts do domínio"
+    listing_queueds: "Lististagem de filas"
+    new_queued: "Nova lista" 
+    add_queued: "Adicionar lista"  
+    edit_queued: "Editar lista" 
+    listing_services: "Listagem de serviços"
+    protocol: "Protocologo"
+    new_state_change: "Lista de serviços de hosts"
+    listing_hosts_services: "Serviços monitorados para o host"
+    domain: "Domínio"
+    domain_created: "Domínio Criado"
+    domain_updated: "Domínio Atualizado"
+    user: "Usuário"
+    event_description: "Descrição do Evento"
+    host_detail: "Datalhes do Servidor"
+    host_created: "Host Criado"
+    host_updated: "Host Atualizado"
+    home: "INÍCIO"
+    terms: "TERMOS"
+    about: "SOBRE"
+    log: "FAÇA LOGIN"
+    logged: "LOGADO"
+    online: "ONLINE"
+    newest: "NOVOS"
+    testers: "TESTADORES"
+    hosts_service_created: "Serviço Criado"
+    hosts_service_updated: "Serviço Atualizado"
+    edit_profile: "Minha Conta"
+    signout: "Sair"
+    register: "Registrar"
+    signin: "Logar"
+    edit_your_profile: "Editando sua conta"
+    sign_in_with: "Logar com"
+    or: "Ou"
+    my_domains: "Meus Domínios"
+    add_domain: "Adicionar Domínio"
+    edit_domain: "Editar Domínio"
+    adding_domain: "Adicionando Domínio"
+    add_host: "Adicionar Host"
+    edit_host: "Editar Host"
+    adding_host: "Adicionando host ao Domínio"
+    add_hosts_service: "Adicionar serviço ao monitoramento"
+    edit_hosts_service: "Editar serviço do monitoramento"
+    adding_hosts_service: "Adicionando serviço ao monitoramento"
+    of_host: "do Host"
+    register_email: "Cadastre o Email"
+    login: "Login"
+    email: "E-mail"
+    password: "Senha"
+    password_confirmation: "Confirmar Senha"
+    update: "Atualizar"
+    create: "Criar"
+    you_can_sing_account: "Você pode se inscrever para esta conta usando"
+    add_another_service_sign: "Adicionar outro serviço para entrar com"
+    add_one_services_sign: "Adicione um dos serviços para entrar com"
+    add_twitter_service_sign: "Adicionar o serviço do twitter para entrar"
+    add_facebook_service_sign: "Adicionar o serviço do facebook para entrar"
+    are_you_sure_remove: "Tem certeza de que deseja remover"
+    authentication_option: "opção de autenticação"
+    remove: "Remover"
+    remember_me: "Lembrar-me"
+    you_must_be_logged: "Você precisa estar logado para acessar essa página"
+    signed_in_successfully: "Assinado com êxito."
+    authentication_successful: "Autenticação bem-sucedida."
+    sorry_didnt_authorize: "Desculpe, você não tem autorização"
+    successfully_destroyed_authentication: "Autenticação destruída com sucesso."
+    successfully_created: "Criado com sucesso."
+    successfully_updated: "Atualizado com sucesso."
+    successfully_created_user_session: "Seção criada com sucesso."
+    successfully_destroyed_user_session: "Seção encerrada com sucesso."
+    reset: "Desfazer"
+
+    #home_titles
+
+    title_home_one: "O que é?"
+    title_home_two: "Como surgiu"
+    title_home_three: "Proposta"
+
+    #home_texts
+
+    text_home_one: "<p>Dumuzzi é um sistema de monitoramento de máquinas e serviços pela internet. Seu objetivo é verificar o estado atual de serviços em máquinas préviamente configuradas, enviando alertas ao administrador.</p>
+          <p>O nome Dumuzzi vem da Mitologia Suméria, onde Dumuzzi representava um filho fiel, um deus guardião das portas do céu. Um serviço de monitoramento eficiente é o guardião do portal dos céus para um SysAdmin, já que, saber que seus servidores estão online e operando em perfeito estado, não tem preço.</p>
+          
+          <p>O serviço é gratuito, limitado à dez (10) domínios por usuário, podendo ser utilizado por qualquer pessoa que queria monitorar serviços ou websites.</p>"
+
+    ##################
+
+    text_home_two: "<p>Dumuzzi nasceu na competição Rally on Rails, feito pela Equipe Cidadelas Jedis e é distribuído sob a licença CDDL, aberto a colaborações.</p>"
+
+    ##################
+
+    text_home_three: "<p>Nossa proposta é disponibilizar um serviço de monitoramento que ao mesmo tempo seja simples e confiavel. Para isto, os testes são feitos de hosts diferentes, em diferentes continentes e provedores de serviço.</p>"
+    #################################### END HOME TEXTS ###############################################################
+
+    license_sentence: "Atribuido a licença Open Source Initiative OSI - Common Development and Distribution License (CDDL-1.0)"
+
+    # terms
+
+    term_index: "Nossa proposta é disponibilizar um serviço de monitoramento que ao mesmo tempo seja simples e confiavel. Para isto, os testes são feitos de hosts diferentes, em diferentes continentes e provedores de serviço."
+
+    term_uses: "Os termos de uso:"
+    term_used_one: "1 - Dumuzzi apenas monitora os serviços remotamente, não efetuando qualquer tipo de ação de recuperação."
+    term_used_two: "2 - Garantimos o envio de mensagens por e-mail."
+    term_used_three: "3 - O serviço preve o envio de mensagens por mensagens instantâneas."
+    term_used_four: "4 - Na eventualidade de envio de mensagens por SMS, os custos serão por conta do utilizador, salvo nos casos houverem patrocinadores. O utilizador, neste caso, deverá aceitar o recebimento de publicidade em cada mensagem."
+    term_used_five: "5 - Dumuzzi não requer a instalação de clientes ou agentes nos sistemas testados."
+    term_used_six: "6 - Dumuzzi utiliza somente técnologias e componentes opensource."
+    term_used_seven: "7 - Dumuzzi é feito para rodar em ambientes Linux e Unix."
+    term_used_eight: "8 - Dumuzzi não possui suporte técnico contratável, seja no local, remoto e/ou por telefone. Oferecemos um suporte básico por e-mail e por meio de lista de discussão. Sua utilização é por conta e risco do utilizador."
+    term_used_nine: "9 - O cancelamento de sua utilização pode ser feito a qualquer momento, em ônus ou quaisquer avisos."
+    term_used_ten: "10 - Dumuzzi não garante a exportação e/ou migração de dados cadastrados."
+    #################################### END TERMS #####################################################################
+
+    technologies_used: "Conheça as tecnologias utilizadas:"

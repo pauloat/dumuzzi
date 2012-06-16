@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+homer: 
+  id: "9796809f7dae482d3123c16585f2b60f97407796"
+  email: "homer@simpsons.com"
+
+#two: 
+#  id: 2
+#  name: "Krusty The Clow"
+#  email: "krusty@simpsons.com"
+#  password: "test"

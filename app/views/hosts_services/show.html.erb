@@ -1,0 +1,37 @@
+  <div id="show">
+    <h3><%= I18n.t :service %> <%= @hosts_service.service.name unless @hosts_service.service.nil?  %> <%= I18n.t :of_host %> <%= @hosts_service.host.name unless @hosts_service.host.nil? %> <%= link_to image_tag("icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit), :border => 0), edit_hosts_service_path(@hosts_service) %> <%= link_to image_tag("icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back), :border => 0), host_path(@hosts_service.host_id) %></h3>
+    <div class="tab_container">
+		  <div id="tab1" class="tab_content">
+			  <table class="tablesorter" cellspacing="0">
+          <tr> 
+            <td><b><%= I18n.t :host %></b></th>
+            <td><%= @hosts_service.host.name unless @hosts_service.host.nil? %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :service %></b></th>
+            <td><%= @hosts_service.service.name unless @hosts_service.service.nil?  %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :interval %></b></th>
+            <td><%= @hosts_service.interval.name unless @hosts_service.interval.nil? %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :description %></b></th>
+            <td><%= @hosts_service.description %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :status %></b></th>
+            <td><%= @hosts_service.status.name unless @hosts_service.status.nil? %></td>
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :monitor %></b></th>
+            <td><%= show_icon @hosts_service.monitor, "enabled", "disabled" %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :enabled %></b></th>
+            <td><%= show_icon @hosts_service.enabled, "enabled", "disabled" %></td>            
+			    </tr>
+        </table>
+      </div>
+    </div>
+  </div>
