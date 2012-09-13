@@ -1,7 +1,9 @@
 Dumuzzi
+=======
 
 
 Sobre / About
+=============
 
 Dumuzzi é um sistema de monitoramento de máquinas e serviços pela internet que tem como objetivo verificar o estado atual de cada serviço e, em caso de queda ou grande lentidão, emitir avisos ao administrador.
 
@@ -15,30 +17,34 @@ Dumuzzi nasceu na competição Rally on Rails, feito pela Equipe Cidadelas Jedis
 
 
 How to run?
+===========
 
  git clone git://github.com/KoshTech/dumuzzi.git
  cd dumuzzi
- rake db:migrate
- rake db:seed
+ bundle exec rake db:create
+ bundle exec  rake db:migrate
+ bundle exec  rake db:seed
  cp config/tester.yml.dist config/tester.yml
  nano config/tester.yml
- 
+ bundle exec rails s
+
 
 
 Conheça das tecnologias utilizadas:
+===================================
 
-- rails 
-- mysql2 
-- sass-rails 
-- coffee-rails 
-- uglifier 
-- jquery-rails 
-- therubyracer 
-- devise 
-- omniauth 
-- zscaffold_admin => git://github.com/vagnerzampieri/zscaffold_admin.git 
-- foreverb 
-- net-ping 
+- rails
+- mysql2
+- sass-rails
+- coffee-rails
+- uglifier
+- jquery-rails
+- therubyracer
+- devise
+- omniauth
+- zscaffold_admin => git://github.com/vagnerzampieri/zscaffold_admin.git
+- foreverb
+- net-ping
 - unicorn
 
 
