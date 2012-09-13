@@ -13,6 +13,18 @@ A utilização do serviço é totalmente gratuita e sem restrições, limitaçõ
 
 Dumuzzi nasceu na competição Rally on Rails, feito pela Equipe Cidadelas Jedis e é distribuído sob a licença CDDL e está aberto a colaborações. Fique a vontade para usar, contribuir, modificar e aperfeiçoar.
 
+
+How to run?
+
+ git clone git://github.com/KoshTech/dumuzzi.git
+ cd dumuzzi
+ rake db:migrate
+ rake db:seed
+ cp config/tester.yml.dist config/tester.yml
+ nano config/tester.yml
+ 
+
+
 Conheça das tecnologias utilizadas:
 
 - rails 
