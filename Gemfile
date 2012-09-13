@@ -8,7 +8,7 @@ gem 'mysql2'
 gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
-gem 'sprockets', :git => "https://github.com/sstephenson/sprockets.git"
+gem 'sprockets'#, :git => "https://github.com/sstephenson/sprockets.git"
 
 
 gem 'jquery-rails'
