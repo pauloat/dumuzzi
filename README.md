@@ -20,12 +20,19 @@ How to run?
 ===========
 
  git clone git://github.com/KoshTech/dumuzzi.git
+
  cd dumuzzi
+
  bundle exec rake db:create
+
  bundle exec  rake db:migrate
+
  bundle exec  rake db:seed
+
  cp config/tester.yml.dist config/tester.yml
+
  nano config/tester.yml
+
  bundle exec rails s
 
 
